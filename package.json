@@ -1,0 +1,25 @@
+{
+  "name": "desafio-6",
+  "version": "1.0.0",
+  "description": "implementacion de SASS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "builder-css":"node-sass --include-path scss scss/main.scss css/main.css",
+    "watchmen-css": "nodemon -e scss -x \"npm run builder-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomasCarrio/desafio-6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomasCarrio/desafio-6/issues"
+  },
+  "homepage": "https://github.com/TomasCarrio/desafio-6#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16"
+  }
+} 

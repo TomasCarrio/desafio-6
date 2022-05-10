@@ -1,0 +1,74 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url(../imagenes/fondo2.jpg);
+  background-size: contain; }
+
+.contenedor-principal {
+  width: 100%;
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+  display: grid;
+  grid-template-areas: "title-nav" "contenido" "final"; }
+  .contenedor-principal .title-nav {
+    grid-area: title-nav;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .contenedor-principal .title-nav .main-title {
+      text-align: center;
+      border: solid 1px red;
+      padding: 10px;
+      padding-bottom: 5px; }
+    .contenedor-principal .title-nav .navig {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      padding: 10px; }
+      .contenedor-principal .title-nav .navig .navig .dropdown li {
+        list-style-type: none;
+        text-align: center;
+        margin: 10px;
+        transition-duration: 1s; }
+      .contenedor-principal .title-nav .navig li:hover {
+        transform: scale(2);
+        transition-duration: 1s; }
+  .contenedor-principal .contenido {
+    grid-area: contenido;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .contenedor-principal .contenido h3 {
+      text-align: center; }
+    .contenedor-principal .contenido .texto {
+      text-align: center; }
+    .contenedor-principal .contenido p {
+      font-weight: bold; }
+    .contenedor-principal .contenido #carouselExampleIndicators {
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      opacity: 1;
+      animation-name: apparition;
+      animation-iteration-count: 1;
+      animation-duration: 1s; }
+
+@keyframes apparition {
+  0% {
+    transform: translateX(50px);
+    opacity: 0; }
+  100% {
+    transform: translateX(0px);
+    opacity: 1; } }
+    .contenedor-principal .contenido .proceso1 {
+      background-color: #caebc5; }
+    .contenedor-principal .contenido .proceso2 {
+      background-color: #ade0e4; }
+  .contenedor-principal .galeria img {
+    display: flex;
+    justify-content: center;
+    width: 100%; }
+  .contenedor-principal footer {
+    grid-area: final;
+    text-align: center; }
