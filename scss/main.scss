@@ -17,7 +17,7 @@
             justify-content: center;
             .main-title {
                     text-align: center;
-                    border: solid 1px red;
+                    border: solid 1px #ff0000;
                     padding: 10px;
                     padding-bottom: 5px;
                 }
@@ -26,6 +26,21 @@
                     justify-content: center;
                     text-align: center;
                     padding: 10px;
+                    
+                    //mapas............
+                    
+                    $navig: (
+                        inicio: #ff0000,
+                        portfolio: #00ffbf,
+                        contacto: #15ff00,
+                        comics: #ffee00,
+                        personajes: #c300ff,
+                    );
+                    @each $nav, $color in $navig {
+                        .nav-#{$nav} {
+                            color: $color;
+                        }
+                    }
                     .navig .dropdown li {
                         list-style-type: none;
                         text-align: center;
@@ -47,11 +62,21 @@
             h3 {
                     text-align: center;
             }
+
+            //mixin..................
+
+            @mixin proporcion ($ancho, $alto) {
+                width: $ancho;
+                height: $alto;
+            }
             .texto {
-                    text-align: center;
+                text-align: center;
             }
             p {
-                    font-weight: bold;
+                font-weight: bold;
+            }
+            .p-1, .p-2 {
+                @include proporcion (100%, 100%)
             }
             #carouselExampleIndicators {
                 width: 100%;
@@ -77,6 +102,17 @@
             }
             .proceso2 {
                 background-color: $color-secondary;
+            }
+
+            //extend...............
+            
+            .list-group {
+                border: solid 2px;
+                padding: 10px 15px;
+                margin: 5px;
+            }
+            .list-group-item {
+                @extend .list-group;
             }
         }
         .galeria img {
